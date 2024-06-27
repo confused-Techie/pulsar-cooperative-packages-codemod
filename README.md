@@ -42,3 +42,11 @@ Below we will list the Pulsar APIs and features that are **not** handled.
 * `atom.commands.dispatch()`
 * `package.json` file: We currently don't do anything to update this file.
 * `README.md` file: We don't do anything to update this file, nor is it very likely that we will.
+
+## Usage
+
+To run this tool use:
+
+```
+npm run transform -- --newName=language-pulsar --oldName=language-atom
+```
