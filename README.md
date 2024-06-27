@@ -40,3 +40,5 @@ Below we will list the Pulsar APIs and features that are **not** handled.
 
 * `keymaps` file: There is not yet support for handling renames via a keymaps file.
 * `atom.commands.dispatch()`
+* `package.json` file: We currently don't do anything to update this file.
+* `README.md` file: We don't do anything to update this file, nor is it very likely that we will.
