@@ -1,0 +1,28 @@
+name: Test
+on:
+  pull_request:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Tests
+    strategy:
+      matrix:
+        node-version: [16.x, 17.x, 18.x, 19.x]
+
+    steps:
+    - name: Checkout the latest code
+      uses: actions/checkout@v4
+
+    - name: Setup NodeJS - ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install Dependencies
+      run: npm instal
+
+    - name: Run Tests
+      run: npm test

@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./index.js --dev"
+    "test": "node ./test/index.test.js --newName=language-pulsar --oldName=language-atom --paths=./test/fixtures/instanced/",
+    "transform": "node ./index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "confused-Techie",
   "license": "MIT",
   "dependencies": {
     "jscodeshift": "^0.16.1"
+  },
+  "devDependencies": {
+    "jest-diff": "^29.7.0"
   }
 }

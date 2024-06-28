@@ -17,6 +17,9 @@
 module.exports =
 function transform(fileInfo, api, options) {
 
+  // Since we don't actually want this package to do anything
+  return;
+
   const j = api.jscodeshift;
   const root = j(fileInfo.source);
 

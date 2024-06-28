@@ -36,7 +36,7 @@ function transform(fileInfo, api, options) {
 
   const j = api.jscodeshift;
   const root = j(fileInfo.source);
-
+  
   const atomConfig = root.find(j.CallExpression, {
     callee: {
       type: "MemberExpression",
