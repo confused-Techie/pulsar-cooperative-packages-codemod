@@ -58,12 +58,12 @@ let TOTAL_ERRORS = 0;
 
     if (instanced !== modified) {
       console.log(RED_TEXT_OUT, `Transformed files do not match: '${file}'!`);
-      const difference = diff(modified, instanced);
+      const difference = diff(modified, instanced, {
+        aColor: (val) => {
+          return `\x1b[32m${val}\x1b[0m`
+        }
+      });
       console.log(difference);
-      // console.log("Expected:\n");
-      // console.log(modified);
-      // console.log("Got:\n");
-      // console.log(instanced);
       TOTAL_ERRORS++;
     } else {
       console.log(GREEN_TEXT_OUT, `Successfully transformed: '${file}'`);
