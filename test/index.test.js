@@ -59,8 +59,13 @@ let TOTAL_ERRORS = 0;
     if (instanced !== modified) {
       console.log(RED_TEXT_OUT, `Transformed files do not match: '${file}'!`);
       const difference = diff(modified, instanced, {
+        // We define `aColor` & `bColor` because `chalk.RED` & `chalk.GREEN`
+        // don't seem to show up in GitHub Actions. But these values do
         aColor: (val) => {
-          return `\x1b[32m${val}\x1b[0m`
+          return `\x1b[32m${val}\x1b[0m`;
+        },
+        bColor: (val) => {
+          return `\x1b[31m${val}\x1b[0m`;
         }
       });
       console.log(difference);
