@@ -51,11 +51,10 @@ To run this tool use:
 npm run transform -- --newName=language-pulsar --oldName=language-atom
 ```
 
+Supported Parameters:
+
 * `newName`: Specifies the new name the package should exist under.
 * `oldName`: Specifies the original name of the package.
-
-Other supported parameters:
-
 * `dry`: A boolean to enable dry mode, or otherwise not writing any changes to disc.
 * `print`: A boolean to print the results of the transformation.
 * `verbose`: A variable that can be set to `1` for increased verbosity.

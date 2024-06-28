@@ -1,7 +1,7 @@
 {
   "name": "pulsar-cooperative-packages-codemod",
   "version": "1.0.0",
-  "description": "",
+  "description": "Codemod for new PulsarCooperative Packages.",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/index.test.js --newName=language-pulsar --oldName=language-atom --paths=./test/fixtures/instanced/",
