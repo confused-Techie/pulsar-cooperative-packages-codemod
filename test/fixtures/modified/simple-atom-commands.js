@@ -8,6 +8,6 @@ atom.commands.add("atom-text-editor", {
   }
 });
 
-atom.commands.add("atom-text-editor", "different-packagee:do-thing", () => {
+atom.commands.add("atom-text-editor", "different-package:do-thing", () => {
   shell.openExternal();
 });
